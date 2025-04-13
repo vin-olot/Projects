@@ -1,0 +1,136 @@
+---
+title: "MEDICATION USAGE ANALYSIS"
+author: "OLOO OTIENO"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  html_document: default
+---
+
+**1. Exploratory Data Analysis (EDA)**
+
+load important libraries:
+```{r libraries, include=FALSE, echo=FALSE}
+library(tidyr)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
+library(gtsummary)
+library(nortest)
+```
+
+
+Import data set;
+```{r load-data}
+df <- read.csv("C:/Users/R/Desktop/Data Analysis/R/data/health_data.csv", stringsAsFactors=TRUE)
+```
+
+
+
+inspect the data
+```{r inspect, echo=FALSE}
+str(df)
+glimpse(df)
+dim(df)
+```
+
+
+
+Handling missing cases
+```{r missing values}
+colSums(is.na(df)) 
+df <- drop_na(df)
+dim(df)
+```
+
+
+
+Descriptive Analysis of the numerical variables
+#### subset to have a data frame of numerical variables and find its summary
+```{r subsetting data}
+numericals <- df %>% 
+  select(AGE, BMI, MEDICATION, SLEEP.HOURS)
+summary(numericals)
+```
+
+
+
+Distributions;
+. Normality check for numerical variables
+. Shapiro and Anderson Darling test (p-value < 0.05 suggest non-normality)
+1. AGE
+```{r distributions}
+qqnorm(df$AGE)
+qqline(df$AGE, col = "magenta")
+shapiro.test(df$AGE)
+ad.test(df$AGE)
+ks.test(jitter(df$AGE), "pnorm", mean(df$AGE), 
+        sd(df$AGE))
+```
+
+2. Body Mass Index (BMI)
+```{r}
+qqnorm(df$BMI)
+qqline(df$BMI, col = "green")
+shapiro.test(df$BMI)
+ad.test(df$BMI)
+ks.test(jitter(df$BMI), "pnorm", mean(df$BMI), 
+        sd(df$BMI))
+```
+
+3. Sleep Hours
+```{r}
+qqnorm(df$SLEEP.HOURS)
+qqline(df$SLEEP.HOURS, col = "yellow")
+shapiro.test(df$SLEEP.HOURS)
+ad.test(df$SLEEP.HOURS)
+ks.test(jitter(df$SLEEP.HOURS), "pnorm", mean(df$SLEEP.HOURS), 
+        sd(df$SLEEP.HOURS))
+```
+
+
+
+**2. Group comparison tests** 
+Do smokers take more medication than no-smokers?
+```{r}
+wilcox.test(MEDICATION ~ SMOKER, data = df)
+```
+
+
+Is there a correlation between BMI and medication amount?
+```{r}
+cor.test(df$BMI, df$MEDICATION, method = "kendall")
+# regression
+m <- lm(MEDICATION~BMI, data = df)
+summary(m)
+tbl_regression(m)
+```
+ 
+ 
+How does Exercise impact medication usage?(more than 2 factor levels)
+```{r}
+library(dunn.test)
+kruskal.test(MEDICATION~EXERCISE, data = df)
+dunn.test(df$MEDICATION, df$EXERCISE, method = "bonferroni")
+```
+
+
+How does Education level compare with medication usage?
+```{r}
+# One-Way ANOVA
+kruskal.test(MEDICATION~EDUCATION.LEVEL, data = df)
+```
+
+
+Relationship between occupation type and medication
+```{r}
+m <- lm(MEDICATION~OCCUPATION.TYPE, data = df)
+summary(m)
+tbl_regression(m)
+```
+
+
+The data used during this process is not real. It  has been generated specifically for practice.
+I have used it to familiarise myself with basic statistical analysis procedures.
+ 
