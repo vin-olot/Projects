@@ -1,6 +1,7 @@
 ##  **QuantWise Hub Portfolio | Elyvine Oloo Otieno**
 
-Welcome to my personal project portfolio — a collection of analytical projects exploring use cases across healthcare, finance, real estate,
+Welcome to my personal project portfolio.
+A collection of analytical projects exploring use cases across healthcare, finance, real estate,
 and statistical modeling. Each project reflects application of Data Science, Biostatistics, and Business Intelligence.
 
 ---
