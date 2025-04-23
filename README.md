@@ -1,20 +1,20 @@
 # ELYVINE OLOO OTIENO
 
-📞 **Phone**: 0797288653  
-📧 **Email**: elvin.oloo22@gmail.com  
+ **Phone**: 0797288653 / 0726052282  
+ **Email**: elvin.oloo22@gmail.com  
 
 ---
 
-## 👨‍🔬 Profile Summary
+## Profile Summary
 
 **Biostatistician | Data Scientist | Business & Financial Analyst**  
-Skilled in Statistical Modeling, Research, and Business Intelligence
+_Skilled in Statistical Modeling, Research, and Business Intelligence_
 
-A highly analytical and detail-oriented Biostatistics graduate with expertise in data analysis, statistical modeling, business intelligence, and research methodologies. Proficient in leveraging quantitative and qualitative analysis to drive data-driven decision-making across healthcare, finance, research, and business sectors. Experienced in handling complex datasets, data visualization, and strategic problem-solving. Adept at using R, Python, and SPSS to extract meaningful insights and optimize processes, alongside Business Intelligence tools for data storytelling. Strong communicator with a passion for continuous learning and multidisciplinary collaboration.
+A highly analytical and detail-oriented Biostatistics graduate with expertise in biological, public health, and epidemiological data analysis, statistical modeling, business intelligence, and research methodologies. Strong ability to leverage biostatistics knowledge to drive data-informed decision-making in healthcare, finance, research, and business environments. Skilled in managing complex datasets, visual storytelling, and strategic analytics using R, Python, and SPSS, along with BI tools. Passionate about continuous learning and interdisciplinary collaboration.
 
 ---
 
-## 🎓 Education
+## Education
 
 **Applied Data Science**  
 *World Quant University*  
@@ -26,63 +26,69 @@ _Graduation: November 2024_
 
 ---
 
-## 🏅 Certifications
+## Certifications
 
-- Data Analysis – Sonek Data School  
-- Business Intelligence – Sonek Data School
-
----
-
-## 🛠 Technical Skills
-
-- **Statistical Analysis & Modeling**: Regression, ANOVA, Hypothesis Testing (R, SPSS, Python)
-- **Excel**: VLOOKUP, HLOOKUP, Conditional Formatting, Pivot Charts
-- **Data Visualization**: Power BI, Tableau, R Shiny
-- **Business Intelligence**: Financial Analysis, Decision Support
-- **Research & Reporting**: Study Design, Sampling, Reporting
-- **SQL**: Data Manipulation & Querying
-- **Project Management**: Strategic Planning, Stakeholder Engagement
+- Data Analysis – SONEK Data School  
+- Business Intelligence – SONEK Data School
 
 ---
 
-## 💼 Professional Experience
+## Technical Skills
+
+- **Statistical Modeling**: Regression, ANOVA, hypothesis testing, predictive analysis (R, Python, SPSS)
+- **Excel Analytics**: VLOOKUP, HLOOKUP, conditional formatting, pivot charts
+- **Visualization Tools**: Power BI, Tableau
+- **Business Intelligence**: Financial analysis, data-driven strategy, decision-making
+- **Research & Reporting**: Sampling, study design, technical writing
+- **SQL**: Data manipulation and database management
+- **Project Management**: Strategic planning, teamwork, stakeholder collaboration
+
+---
+
+## Professional Experience
 
 ### Sales and Marketing Agent  
 **SOFTNOVATE Solutions, Nairobi**  
 *September 2024 – Present*
 
-- Promoted software products via strategic marketing campaigns.
-- Presented product demos and maintained strong client relationships.
+- Designed and executed targeted marketing campaigns.
+- Delivered product demos emphasizing competitive advantages.
+- Fostered client relationships and managed negotiations.
 - Achieved a 60% lead-to-client conversion rate.
-- Contributed to a 35% quarterly revenue increase.
-
-### Junior Data Analyst  
-**Stat Ace Consulting, Nairobi**  
-*August 2024 – February 2025*
-
-- Cleaned, transformed, and analyzed large datasets.
-- Developed dashboards using Power BI and R Shiny.
-- Led a dashboard project adopted across three major clients.
+- Boosted quarterly revenue by 35% via sales optimization.
 
 ### Data Analyst & Research Attaché  
 **Kenya Agricultural and Livestock Research Organization (KALRO)**  
 *May 2023 – July 2023*
 
-- Applied regression and ANOVA to agricultural datasets.
-- Introduced reproducible R scripts for experimental analysis.
-- Developed a dashboard to improve internal data monitoring.
+- Collected, cleaned, and analyzed agricultural data.
+- Applied statistical methods to evaluate research outcomes.
+- Created visual summaries and research briefs.
+- Designed a crop monitoring tool with reproducible R scripts.
+- Improved internal data monitoring with dashboards.
 
 ---
 
-## 🔬 Research & Career Interests
+## Projects
+
+### Lung Cancer Survival Analysis  
+Conducted survival analysis on clinical trial data (veteran dataset) for chemotherapy outcomes. Identified survival factors including age, performance status, and treatment type.
+
+### Air Quality in Nairobi  
+Time series analysis using linear regression to predict air quality levels based on temporal trends.
+
+
+---
+
+## Research & Career Interests
 
 - Agricultural and Environmental Epidemiology  
-- Economic Evaluation of Health Policies  
+- Economic Evaluation of Health and Agricultural Policies  
 - Public Health Data Analytics  
 - Predictive Modeling in Healthcare and Finance
 
 ---
 
-## 📄 References
+## References
 
 Available upon request.
