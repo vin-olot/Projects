@@ -1,6 +1,7 @@
 # ELYVINE OLOO OTIENO
 
- **Phone**: 0797288653 / 0726052282  
+ **Phone**: 0726052282  
+ **WhatsApp**: 0797288653
  **Email**: elvin.oloo22@gmail.com  
 
 ---
@@ -66,7 +67,6 @@ _Graduation: November 2024_
 - Created visual summaries and research briefs.
 - Designed a crop monitoring tool with reproducible R scripts.
 - Improved internal data monitoring with dashboards.
-
 ---
 
 ## Projects
@@ -76,7 +76,6 @@ Conducted survival analysis on clinical trial data (veteran dataset) for chemoth
 
 ### Air Quality in Nairobi  
 Time series analysis using linear regression to predict air quality levels based on temporal trends.
-
 
 ---
 
