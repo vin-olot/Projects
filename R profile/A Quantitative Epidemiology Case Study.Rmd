@@ -31,8 +31,9 @@ library(broom)       # Tabular representation of ANOVA Results
 Data Import and Preparation:
 
 ```{r load-data}
-data <- read.csv("C:/Users/R/Desktop/Data Analysis/R/data/Epi_Task_Data.csv", stringsAsFactors=TRUE)
+data <- read.csv("data/Epi_Task_Data.csv", stringsAsFactors=TRUE)
 head(data)
+view(data)
 ```
 
 1(a). Mean ILI Percentage per County per Year == 2023:
