@@ -1,0 +1,116 @@
+---
+title: "Analyzing Regional Trends in Influenza-Like Illness (ILI) in Kenya (2023–2024): A Quantitative Epidemiology Case Study"
+author: "Elyvine Oloo Otieno"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  word_document:
+    toc: true
+    number_sections: true
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    theme: cerulean
+  pdf_document:
+    toc: true
+always_allow_html: true
+---
+
+Required libraries:
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)   # Core packages for data manipulation and visualization.
+library(ggplot2)     # Specifically used for creating data visualizations
+library(dplyr)       # Provides functions for data manipulation 
+library(kableExtra)  # Enhances knitr tables with styling options
+library(ggpubr)      # Additional plotting tools.
+library(broom)       # Tabular representation of ANOVA Results
+```
+
+Data Import and Preparation:
+
+```{r load-data}
+data <- read.csv("C:/Users/R/Desktop/Data Analysis/R/data/Epi_Task_Data.csv", stringsAsFactors=TRUE)
+head(data)
+```
+
+1(a). Mean ILI Percentage per County per Year == 2023:
+
+```{r}
+mean_ili <- data %>%
+  filter(year == 2023) %>%
+  group_by(county, year) %>%
+  summarise(mean_ili = mean(ili_percentage, na.rm = TRUE)) %>%
+  arrange(desc(mean_ili))
+
+kable(mean_ili, caption = "Mean ILI Percentage per County in 2023") %>%
+  kable_styling(full_width = FALSE)
+
+```
+
+
+
+1(b). Mean ILI Percentage per County per Year == 2024:
+
+```{r mean-ili}
+mean_ili <- data %>%
+  filter(year == 2024) %>%
+  group_by(county, year) %>%
+  summarise(mean_ili = mean(ili_percentage, na.rm = TRUE)) %>%
+  arrange(desc(mean_ili))
+
+kable(mean_ili, caption = "Mean ILI Percentage per County in 2024") %>%
+  kable_styling(full_width = FALSE)
+
+```
+
+2. Weekly ILI Trends & Peak Weeks:
+
+```{r ili-trend}
+ggplot(data, aes(x = epi_week, y = ili_percentage, color = county)) +
+  stat_summary(fun = mean, geom = "line") +
+  labs(title = "Weekly ILI Trends by County (2023-2024)",
+       x = "Epidemiological Week",
+       y = "Mean ILI Percentage") +
+  theme_minimal()
+```
+
+3. Incidence Rates per 100,000 (Nairobi, Kisumu, Mombasa):
+
+```{r incidence-rate}
+selected <- data %>%
+  filter(county %in% c("Nairobi", "Kisumu", "Mombasa")) %>%
+  mutate(incidence_rate = (ili_percentage / 100) * 100000)
+
+incidence_summary <- selected %>%
+  group_by(county) %>%
+  summarise(mean_incidence = mean(incidence_rate, na.rm = TRUE))
+
+kable(incidence_summary, caption = "Mean Incidence Rate per 100,000 Population") %>%
+  kable_styling(full_width = F)
+```
+
+ 4. Comparing ILI Percentages (ANOVA):
+
+```{r anova}
+anova_data <- data %>%
+  filter(county %in% c("Nairobi", "Kisumu", "Mombasa"))
+
+anova_result <- aov(ili_percentage ~ county, data = anova_data)
+
+# Tidy ANOVA summary
+anova_table <- tidy(anova_result)
+
+# Display as a styled table
+kable(anova_table, caption = "ANOVA Results: ILI Percentage by County") %>%
+  kable_styling(full_width = FALSE)
+
+```
+
+5. Summary of Findings
+
+- Nairobi and Mombasa have generally higher mean ILI percentages.
+- Incidence rates indicate a higher ILI burden in Nairobi County.
+- Weekly trends show seasonal ILI peaks between weeks 4 and 5.
+- ANOVA test shows no significant diffrence differences in ILI proportions among counties.
