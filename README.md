@@ -75,6 +75,9 @@ _Graduation: November 2024_
 ### Lung Cancer Survival Analysis  
 Conducted survival analysis on clinical trial data (veteran dataset) for chemotherapy outcomes. Identified survival factors including age, performance status, and treatment type.
 
+### Heart Failure Prediction
+Conducted logistic regression analysis on clinical data to predict heart failure risk. Identified key predictors, including exercise-induced angina, chest pain type, sex, and ECG results.
+
 ### Air Quality in Nairobi  
 Time series analysis using linear regression to predict air quality levels based on temporal trends.
 
