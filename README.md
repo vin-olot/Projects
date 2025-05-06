@@ -53,7 +53,7 @@ I enjoy taking complex data and turning it into actionable insights that drive d
 
 Feel free to reach out via email at [info.quantwise@gmail.com](mailto:info.quantwise@gmail.com).
 
-**PHONE**: +254 726 052 282
+**PHONE**: +254 797 288 653
 
 ---
 
